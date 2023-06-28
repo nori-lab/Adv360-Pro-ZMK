@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
-#define ZMK_HID_KEYBOARD_NKRO_MAX_USAGE 0x64
 
 / {
     behaviors {
