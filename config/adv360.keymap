@@ -26,27 +26,51 @@
     compatible = "zmk,keymap";
 
     default_layer {
-      display-name = "Base";  // layer 0
+      display-name = "Base";  // layer 0  Windows用
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                           &mo 3     &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 2                                                           &mo 5     &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &kp HOME                                                         &kp PG_UP &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
         &kp CAPS  &kp A     &kp S    &kp D    &kp F      &kp G  &kp END        &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL            &kp PG_DN &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                           &mo 1     &kp K_CONTEXT_MENU                      &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-        &mo 2     &kp GRAVE &kp ESC  &kp LEFT &kp RIGHT            &kp BSPC  &kp DEL  &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE                    &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+        &mo 4     &kp GRAVE &kp ESC  &kp LEFT &kp RIGHT            &kp BSPC  &kp DEL  &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE                    &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 4
       >;
     };
+
+    extra2 { 
+      display-name = "Mac"; //layer 1  Mac用
+      bindings = <
+        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 3                                                           &mo 5     &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &kp HOME                                                         &kp PG_UP &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+        &kp CAPS  &kp A     &kp S    &kp D    &kp F      &kp G  &kp END        &kp LCMD  &kp LCTRL &kp LALT  &kp RCMD            &kp PG_DN &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                           &mo 6     &kp PG_UP                               &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+        &mo 4     &kp GRAVE &kp ESC  &kp LEFT &kp RIGHT                &kp BSPC &kp DEL  &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                    &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 4
+      >;
+    };
+
     keypad {
-      display-name = "Kp";  // layer 1
+      display-name = "KpWin";  // layer 2  Keypad Windows用
       bindings = <
         &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                           &mo 3   &kp N6    &kp KP_NUM &kp EQUAL    &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &trans                                                           &trans  &kp BSPC  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
         &kp CAPS  &kp A     &kp S    &kp D    &kp F      &kp G  &trans         &trans    &trans    &trans    &trans              &trans  &kp LEFT  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                           &trans    &trans                                &kp RIGHT &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
-        &mo 2     &kp GRAVE &kp ESC  &kp LEFT &kp RIGHT                &kp BSPC &kp DEL  &trans    &trans    &kp ENTER &kp KP_N0                   &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
+        &mo 4     &kp GRAVE &kp ESC  &kp LEFT &kp RIGHT                &kp BSPC &kp DEL  &trans    &trans    &kp ENTER &kp KP_N0                   &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 4
       >;
     };
+
+    extra3 { 
+      display-name = "KpMac";   // layer 3 Keypad Mac用
+      bindings = <
+        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                           &mo 3   &kp N6    &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
+        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &trans                                                           &trans  &kp BSPC  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
+        &kp CAPS  &kp A     &kp S    &kp D    &kp F      &kp G  &trans         &trans    &trans    &trans    &trans              &trans  &kp LEFT  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
+        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                           &trans    &trans                                &kp RIGHT &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
+        &mo 4     &kp GRAVE &kp ESC  &kp LEFT &kp RIGHT                &kp BSPC &kp DEL  &trans    &trans    &kp ENTER &kp KP_N0                   &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 4
+      >;
+
+
     fn {
-      display-name = "Fn";  // layer 2
+      display-name = "Fn";  // layer 4
       bindings = <
         &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1                                           &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
         &trans &trans &trans &trans &trans &trans  &none                                           &none &trans &trans &trans &trans  &trans  &trans
@@ -56,7 +80,7 @@
       >;
     };
     mod {
-      display-name = "Mod";  // layer 3
+      display-name = "Mod";  // layer 5
       bindings = <
         &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                     &trans                 &none        &none        &none        &none &none &none
         &none &none        &to 0        &none        &none        &none        &bootloader                                                               &bootloader            &none        &none        &none        &none &none &none
@@ -66,35 +90,12 @@
       >;
     };
     extra1 { 
-      display-name = "Red";  // layer 4
+      display-name = "Cyan";  // layer 6
       status = "reserved";
     };
 
     extra2 { 
-      display-name = "Purple"; //layer 5  Mac用
-      bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 6                                                           &mo 3     &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &kp HOME                                                         &kp PG_UP &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-        &kp CAPS  &kp A     &kp S    &kp D    &kp F      &kp G  &kp END        &kp LCMD  &kp LCTRL &kp LALT  &kp RCMD            &kp PG_DN &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                           &mo 6     &kp PG_UP                               &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-        &mo 2     &kp GRAVE &kp ESC  &kp LEFT &kp RIGHT                &kp BSPC &kp DEL  &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                    &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
-      >;
-    };
-
-    extra3 { 
-      display-name = "Cyan";   // layer 6 Mac用keypad
-      bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                           &mo 3   &kp N6    &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &trans                                                           &trans  &kp BSPC  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
-        &kp CAPS  &kp A     &kp S    &kp D    &kp F      &kp G  &trans         &trans    &trans    &trans    &trans              &trans  &kp LEFT  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                           &trans    &trans                                &kp RIGHT &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
-        &mo 2     &kp GRAVE &kp ESC  &kp LEFT &kp RIGHT                &kp BSPC &kp DEL  &trans    &trans    &kp ENTER &kp KP_N0                   &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
-      >;
-
-    };
-
-    extra4 { 
-      display-name = "Yellow";    
+      display-name = "Yellow"; // layer 7
       status = "reserved";
     };
   };
